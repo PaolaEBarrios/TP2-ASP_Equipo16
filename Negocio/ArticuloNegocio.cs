@@ -162,5 +162,69 @@ namespace Negocio
             }
         }
 
+        public List<Articulo>listarConSP()
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos= new AccesoDatos();
+            try
+            {
+                string consulta = "Select a.Id as Id, a.Codigo as Codigo,a.Nombre as Nombre,a.Descripcion as Descripcion,c.Descripcion AS Categoria,m.Descripcion AS Marca,i.ImagenUrl AS UrlImagen, a.Precio as Precio from ARTICULOS as a left join IMAGENEs as i on i.IdArticulo = a.Id left join marcas as m on m.Id = a.IdMarca left join CATEGORIAS as c on c.Id = a.IdCategoria";
+
+                datos.setearQuery(consulta);
+                datos.ejecutarLectura();
+                
+                while(datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+
+                    aux.Id = (int)datos.Lector["Id"];
+                    if (!(datos.Lector["Codigo"] is DBNull))
+                    {
+                        aux.codigoArticulo = (string)datos.Lector["Codigo"];
+                    }
+
+                    if (!(datos.Lector["Nombre"] is DBNull))
+                        aux.nombre = (string)datos.Lector["Nombre"];
+                    if (!(datos.Lector["Descripcion"] is DBNull))
+                        aux.descripcion = (string)datos.Lector["Descripcion"];
+
+                    aux.Marca = new Marca();
+                    if (!(datos.Lector["Marca"] is DBNull))
+                        aux.Marca.marca = (string)datos.Lector["Marca"];
+                    else
+                        aux.Marca.marca = "Sin marca";
+
+                    aux.Categoria = new Categoria();
+                    if (!(datos.Lector["Categoria"] is DBNull))
+                        aux.Categoria.categoria = (string)datos.Lector["Categoria"];
+                    else
+                        aux.Categoria.categoria = "Sin categoria";
+
+                    //if(!(datos.Lector.IsDBNull(datos.Lector.GetOrdinal("ImagenUrl"))))
+                    //  aux.UrlImagen = (string)datos.Lector.GetString(5);
+
+                    aux.imagen = new Imagen();
+                    if (!(datos.Lector["UrlImagen"] is DBNull))
+                        aux.imagen.url = (string)datos.Lector["UrlImagen"];
+
+                    if (!(datos.Lector["Precio"] is DBNull))
+                        aux.precio = (decimal)datos.Lector["Precio"];
+
+
+                    //datos.cerrarConexion();
+                    lista.Add(aux);
+
+                }
+
+
+                return lista;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
      }
 }
