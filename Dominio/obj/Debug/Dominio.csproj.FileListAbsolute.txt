@@ -4,3 +4,9 @@ E:\UTN\PROGRAMACION 3\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.csproj.Assembly
 E:\UTN\PROGRAMACION 3\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 E:\UTN\PROGRAMACION 3\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.dll
 E:\UTN\PROGRAMACION 3\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.pdb
+E:\UTN\Programacion3\tp2\traidogit\TP2-ASP_Equipo16\Dominio\bin\Debug\Dominio.dll
+E:\UTN\Programacion3\tp2\traidogit\TP2-ASP_Equipo16\Dominio\bin\Debug\Dominio.pdb
+E:\UTN\Programacion3\tp2\traidogit\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+E:\UTN\Programacion3\tp2\traidogit\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+E:\UTN\Programacion3\tp2\traidogit\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.dll
+E:\UTN\Programacion3\tp2\traidogit\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.pdb
