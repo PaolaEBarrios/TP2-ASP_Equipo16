@@ -20,7 +20,7 @@ namespace Negocio
 
             try
             {
-                datos.setearQuery("SELECT min(I.IMAGENURL)as UrlImagen, A.ID as Id,A.CODIGO as Codigo,A.NOMBRE as Nombre,A.Descripcion as Descripcion, C.Descripcion as Categoria, M.Descripcion as Marca,A.Precio as Precio from ARTICULOS as a left join IMAGENES as i on i.IdArticulo=a.id left join MARCAS as m on m.id=a.IdMarca left join CATEGORIAS as c on c.id=a.IdCategoria group by i.IdArticulo,a.Nombre,a.codigo,a.Descripcion,a.precio,a.id,c.Descripcion,m.Descripcion");
+                datos.setearQuery("Select a.Id as Id, a.Codigo as Codigo,a.Nombre as Nombre,a.Descripcion as Descripcion,c.Descripcion AS Categoria,m.Descripcion AS Marca,i.ImagenUrl AS UrlImagen, a.Precio as Precio from ARTICULOS as a left join IMAGENEs as i on i.IdArticulo = a.Id left join marcas as m on m.Id = a.IdMarca left join CATEGORIAS as c on c.Id = a.IdCategoria");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -222,6 +222,52 @@ namespace Negocio
 
                 throw;
             }
+        }
+
+        public List<Articulo>listarArticuloXid(string id)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                string consulta = "select a.Codigo as Codigo,a.Descripcion as Descripcion,c.Descripcion as Categoria,m.Descripcion as Marca,a.Nombre as Nombre,a.Precio as Precio from ARTICULOS as a left join MARCAS as m on m.Id = a.IdMarca left join CATEGORIAS as c on c.Id = a.IdCategoria where a.id =  ";
+                consulta += id;
+                
+                datos.setearQuery(consulta);
+                datos.ejecutarLectura();
+
+               
+                if(datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+
+                    aux.codigoArticulo = (string)datos.Lector["Codigo"];
+                    aux.descripcion = (string)datos.Lector["Descripcion"];
+                    
+                    aux.Categoria = new Categoria();
+                    aux.Categoria.categoria = (string)datos.Lector["Categoria"];
+
+                    aux.Marca = new Marca();
+                    aux.Marca.marca = (string)datos.Lector["Marca"];
+
+                    aux.nombre = (string)datos.Lector["Nombre"];
+
+                    aux.precio = (decimal)datos.Lector["Precio"];
+
+                    lista.Add(aux);
+
+                }
+
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
 
      }
