@@ -242,18 +242,31 @@ namespace Negocio
                 {
                     Articulo aux = new Articulo();
 
-                    aux.codigoArticulo = (string)datos.Lector["Codigo"];
-                    aux.descripcion = (string)datos.Lector["Descripcion"];
+                    if (!(datos.Lector["Codigo"] is DBNull))
+                        aux.codigoArticulo = (string)datos.Lector["Codigo"];
+
+                    if (!(datos.Lector["Descripcion"] is DBNull))
+                        aux.descripcion = (string)datos.Lector["Descripcion"];
                     
                     aux.Categoria = new Categoria();
-                    aux.Categoria.categoria = (string)datos.Lector["Categoria"];
+                    if (!(datos.Lector["Categoria"] is DBNull))
+                        aux.Categoria.categoria = (string)datos.Lector["Categoria"];
+                    else
+                        aux.Categoria.categoria = "Sin categoria";
+                    
 
                     aux.Marca = new Marca();
-                    aux.Marca.marca = (string)datos.Lector["Marca"];
 
-                    aux.nombre = (string)datos.Lector["Nombre"];
+                    if (!(datos.Lector["Marca"] is DBNull))
+                        aux.Marca.marca = (string)datos.Lector["Marca"];
+                    else
+                        aux.Marca.marca = "Sin marca";
 
-                    aux.precio = (decimal)datos.Lector["Precio"];
+                    if (!(datos.Lector["Nombre"] is DBNull))
+                        aux.nombre = (string)datos.Lector["Nombre"];
+
+                    if (!(datos.Lector["Precio"]is DBNull))
+                        aux.precio = (decimal)datos.Lector["Precio"];
 
                     lista.Add(aux);
 
