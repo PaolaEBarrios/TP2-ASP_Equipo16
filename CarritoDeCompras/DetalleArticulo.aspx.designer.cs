@@ -33,12 +33,12 @@ namespace CarritoDeCompras
         protected global::System.Web.UI.WebControls.GridView dgvDetalleArticulo;
 
         /// <summary>
-        /// Control dgvImagenesArticulo.
+        /// Control repImagen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgvImagenesArticulo;
+        protected global::System.Web.UI.WebControls.Repeater repImagen;
     }
 }

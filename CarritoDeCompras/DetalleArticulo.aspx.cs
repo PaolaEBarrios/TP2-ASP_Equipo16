@@ -27,7 +27,10 @@ namespace CarritoDeCompras
                 imagenList=negocioImagen.listarImagenXidArticulo(id);
 
                 dgvDetalleArticulo.DataSource= articuloList;
-                dgvImagenesArticulo.DataSource = imagenList;
+                
+                repImagen.DataSource= imagenList;
+                repImagen.DataBind();
+                
 
                 
                 DataBind();
