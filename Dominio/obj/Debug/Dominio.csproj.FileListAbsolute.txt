@@ -16,3 +16,9 @@ E:\UTN\Programacion3\tp2\traidogit\s\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.
 E:\UTN\Programacion3\tp2\traidogit\s\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 E:\UTN\Programacion3\tp2\traidogit\s\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.dll
 E:\UTN\Programacion3\tp2\traidogit\s\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Dominio\bin\Debug\Dominio.dll
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.dll
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Dominio\obj\Debug\Dominio.pdb
