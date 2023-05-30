@@ -34,3 +34,12 @@ E:\UTN\Programacion3\tp2\traidogit\s\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.
 E:\UTN\Programacion3\tp2\traidogit\s\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 E:\UTN\Programacion3\tp2\traidogit\s\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.dll
 E:\UTN\Programacion3\tp2\traidogit\s\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\bin\Debug\Negocio.dll
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\bin\Debug\Dominio.dll
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.dll
+C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.pdb
