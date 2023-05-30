@@ -3,8 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>CARRITO</h1>
-    <p>Carrito de compras</p>
+    <h1>Tienda</h1>
+    <p>Tienda De Articulos</p>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
