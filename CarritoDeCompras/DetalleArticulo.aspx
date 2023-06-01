@@ -6,6 +6,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <h2 style="padding: 15px">Detalles del articulo </h2>
+
+
+
     <asp:Label ID="LblArticulo" runat="server" Text=""></asp:Label>
 
     <asp:GridView runat="server" ID="dgvDetalleArticulo">

@@ -4,6 +4,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Tienda</h1>
+
+    <asp:Label Text="Filtrar" runat="server"/>
+    <asp:TextBox runat="server" ID="Txtfiltro" CssClass="form-control" AutoPostBack="true" OnTextChanged="filtro_TextChanged" />
+
+
     <p>Tienda De Articulos</p>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">

@@ -45,5 +45,10 @@ namespace CarritoDeCompras
 
             
         }
+
+        protected void filtro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

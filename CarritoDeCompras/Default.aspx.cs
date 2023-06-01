@@ -19,6 +19,7 @@ namespace CarritoDeCompras
             datos.ejecutarLectura();
             datos.cerrarConexion();
             ArticuloNegocio negocio = new ArticuloNegocio();
+            Session.Add("Lista Articulos", negocio.listarConSP());
             ListaArticulo = negocio.listarConSP();
             
             if(!IsPostBack)
@@ -43,6 +44,9 @@ namespace CarritoDeCompras
 
         }
 
-
-    }
+        protected void filtro_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> lista= (List<Articulo>)Session["Lista Articulos"];
+        }
+    } 
 }
