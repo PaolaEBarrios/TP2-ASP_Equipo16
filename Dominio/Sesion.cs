@@ -8,5 +8,6 @@ namespace dominio
 {
     class Sesion
     {
+        
     }
 }

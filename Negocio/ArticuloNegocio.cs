@@ -162,16 +162,16 @@ namespace Negocio
             }
         }
 
-        public List<Articulo>listarConSP()
+        public List<Articulo> listarConSP()
         {
             List<Articulo> lista = new List<Articulo>();
-            AccesoDatos datos= new AccesoDatos();
+            AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearProcedimiento("SPlistarArticulo");
                 datos.ejecutarLectura();
-                
-                while(datos.Lector.Read())
+
+                while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
 
