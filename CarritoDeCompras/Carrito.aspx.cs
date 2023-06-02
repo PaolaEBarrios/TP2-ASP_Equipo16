@@ -10,10 +10,28 @@ namespace CarritoDeCompras
 {
     public partial class Carrito : System.Web.UI.Page
     {
-        
+        public List<Articulo> ListaArticulo { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            AccesoDatos datos = new AccesoDatos();
+            datos.setearQuery("create PROCEDURE SPlistarArticulo\r\nAS\r\nSELECT min(I.IMAGENURL)as UrlImagen, A.ID as Id,A.CODIGO as Codigo,A.NOMBRE as Nombre,A.Descripcion as Descripcion, C.Descripcion as Categoria, M.Descripcion as Marca,A.Precio as Precio\r\nfrom ARTICULOS as a\r\nleft join\r\nIMAGENES as i\r\non i.IdArticulo=a.id\r\nleft join MARCAS as m\r\non m.id=a.IdMarca\r\nleft join CATEGORIAS as c\r\non c.id=a.IdCategoria\r\ngroup by i.IdArticulo,a.Nombre,a.codigo,a.Descripcion,a.precio,a.id,c.Descripcion,m.Descripcion ");
+            datos.ejecutarLectura();
+            datos.cerrarConexion();
+
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Session.Add("Lista Articulos", negocio.listarConSP());
+            ListaArticulo = negocio.listarConSP();
+
+            if (!IsPostBack)
+            {
+                repRepetidor.DataSource = ListaArticulo;
+                repRepetidor.DataBind();
+
+            }
+
+            datos.setearQuery("drop PROCEDURE SPlistarArticulo");
+            datos.ejecutarLectura();
+            datos.cerrarConexion();
         }
     }
 }
