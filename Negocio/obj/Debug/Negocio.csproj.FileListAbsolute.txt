@@ -43,3 +43,12 @@ C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.csp
 C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.dll
 C:\Users\Peterzz\Documents\GitHub\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.pdb
+E:\UTN\TPGRUPO16\TP2-ASP_Equipo16\Negocio\bin\Debug\Negocio.dll
+E:\UTN\TPGRUPO16\TP2-ASP_Equipo16\Negocio\bin\Debug\Negocio.pdb
+E:\UTN\TPGRUPO16\TP2-ASP_Equipo16\Negocio\bin\Debug\Dominio.dll
+E:\UTN\TPGRUPO16\TP2-ASP_Equipo16\Negocio\bin\Debug\Dominio.pdb
+E:\UTN\TPGRUPO16\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+E:\UTN\TPGRUPO16\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+E:\UTN\TPGRUPO16\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+E:\UTN\TPGRUPO16\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.dll
+E:\UTN\TPGRUPO16\TP2-ASP_Equipo16\Negocio\obj\Debug\Negocio.pdb

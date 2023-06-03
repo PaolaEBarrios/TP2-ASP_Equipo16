@@ -23,7 +23,7 @@
                             <p class="card-text"><%#Eval("Marca") %></p>
                             <p class="card-text">$<%#Eval("Precio") %></p>
                             <a href="DetalleArticulo.aspx?id=<%#Eval("Id") %>">Ver detalle</a>
-                            <asp:Button ID="btnAgregar" runat="server" Text="Agregar"  CssClass="btn btn-primary" CommandArgument='<%#Eval("Id") %>' CommandName="ArticuloId" OnClick="btnAgregar_Click"/>
+                            <asp:Button autoPOSTBACK="true" ID="btnAgregar" runat="server" Text="Agregar"  CssClass="btn btn-primary" CommandArgument='<%#Eval("Id") %>' CommandName="ArticuloId" OnClick="btnAgregar_Click"/>
                         </div>
                     </div>
                 </div>
