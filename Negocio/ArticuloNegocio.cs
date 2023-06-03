@@ -231,7 +231,7 @@ namespace Negocio
 
             try
             {
-                string consulta = "select a.Codigo as Codigo,a.Descripcion as Descripcion,c.Descripcion as Categoria,m.Descripcion as Marca,a.Nombre as Nombre,a.Precio as Precio from ARTICULOS as a left join MARCAS as m on m.Id = a.IdMarca left join CATEGORIAS as c on c.Id = a.IdCategoria where a.id =  ";
+                string consulta = "select a.Id as Id, a.Codigo as Codigo,a.Descripcion as Descripcion,c.Descripcion as Categoria,m.Descripcion as Marca,a.Nombre as Nombre,a.Precio as Precio from ARTICULOS as a left join MARCAS as m on m.Id = a.IdMarca left join CATEGORIAS as c on c.Id = a.IdCategoria where a.id =  ";
                 consulta += id;
                 
                 datos.setearQuery(consulta);
@@ -273,7 +273,10 @@ namespace Negocio
 
                     if (!(datos.Lector["Precio"] is DBNull))
                         aux.precio = (decimal)datos.Lector["Precio"];
-                    
+
+                    if (!(datos.Lector["Id"] is DBNull))
+                        aux.Id = (int)datos.Lector["Id"];
+
 
                     lista.Add(aux);
 

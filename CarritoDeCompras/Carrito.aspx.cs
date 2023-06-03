@@ -31,7 +31,7 @@ namespace CarritoDeCompras
             //RepCarrito.DataSource = sesion.ListadeCarrito();
             //RepCarrito.DataBind();
 
-            sesion.ArticuloASession(int.Parse(valor));
+            sesion.ArticuloEliminarEnSession(int.Parse(valor));
 
 
 

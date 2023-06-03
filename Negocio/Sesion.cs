@@ -116,5 +116,43 @@ namespace Negocio
 
         }
 
+        public void ArticuloEliminarEnSession(int id)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            List<Carrito> list = ListadeCarrito();
+            List<Articulo> listaArticulo = new List<Articulo>();
+            Carrito carrito = new Carrito();
+
+
+            try
+            {
+
+
+                listaArticulo = negocio.listarArticuloXid(id.ToString());
+
+
+                foreach (Articulo item in listaArticulo)
+                {
+                    carrito.Id = item.Id;
+                    carrito.precio = (float)item.precio;
+                    carrito.nombre = item.nombre;
+                    carrito.marca = item.Marca.marca;
+
+                }
+
+                list.Remove(carrito);
+
+                HttpContext.Current.Session["CarroCompra"] = list;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
     }
 }
