@@ -10,6 +10,7 @@
                 <p><%#Eval("precio") %></p>
                 <p><%#Eval("nombre") %></p>
                 <p><%#Eval("marca") %></p>
+                <asp:Button autoPOSTBACK = "true" ID="btnEliminar" runat="server" Text="Eliminar"  CssClass="btn btn-primary" CommandArgument='<%#Eval("Id") %>' CommandName="ArticuloId" OnClick="btnEliminar_Click"/>
             </div>
 
         </ItemTemplate>

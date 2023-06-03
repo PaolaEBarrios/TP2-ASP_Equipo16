@@ -39,6 +39,13 @@ namespace Negocio
             HttpContext.Current.Session["id"] = lista;
         }
 
+        public void EliminarId(int id)
+        {
+            List<int> lista = ListadeSesion();
+            lista.Remove(id);
+            HttpContext.Current.Session["id"] = lista;
+        }
+
 
         public int CantSession()
         {
@@ -89,7 +96,7 @@ namespace Negocio
 
                 foreach (Articulo item in listaArticulo)
                 {
-
+                    carrito.Id = item.Id;
                     carrito.precio= (float)item.precio;
                     carrito.nombre = item.nombre;
                     carrito.marca = item.Marca.marca;
