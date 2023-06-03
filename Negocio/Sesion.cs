@@ -46,11 +46,25 @@ namespace Negocio
             HttpContext.Current.Session["id"] = lista;
         }
 
+        public void EliminarCarrito(int id)
+        {
+            
+        }
+
 
         public int CantSession()
         {
             List<int> lista = ListadeSesion();
             if(lista == null)
+                return 0;
+            else
+                return lista.Count;
+        }
+
+        public int CantCarrito()
+        {
+            List<Carrito> lista = ListadeCarrito();
+            if (lista == null)
                 return 0;
             else
                 return lista.Count;
@@ -121,29 +135,34 @@ namespace Negocio
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             List<Carrito> list = ListadeCarrito();
+            List<Carrito> list1 = new List<Carrito>();
             List<Articulo> listaArticulo = new List<Articulo>();
             Carrito carrito = new Carrito();
+            int carro = CantCarrito();
 
 
             try
             {
 
 
-                listaArticulo = negocio.listarArticuloXid(id.ToString());
+                //listaArticulo = negocio.listarArticuloXid(id.ToString());
+                
 
-
-                foreach (Articulo item in listaArticulo)
+                for(int i = 0; i<carro; i++)
                 {
-                    carrito.Id = item.Id;
-                    carrito.precio = (float)item.precio;
-                    carrito.nombre = item.nombre;
-                    carrito.marca = item.Marca.marca;
+                    if (listaCarrito[i].Id == id)
+                    {
+                        listaCarrito.Remove(listaCarrito[i]);
+                    }
+                    else
+                    {
 
+                    }
+                        
                 }
+                
+                
 
-                list.Remove(carrito);
-
-                HttpContext.Current.Session["CarroCompra"] = list;
 
             }
             catch (Exception ex)
