@@ -51,7 +51,9 @@ namespace CarritoDeCompras
 
             string valor = ((Button)sender).CommandArgument;
             sesion.AgregarId(int.Parse(valor));
-           // negocio.AgregarAlCarrito(int.Parse(valor));
+            // negocio.AgregarAlCarrito(int.Parse(valor));
+
+            sesion.ArticuloASession(int.Parse(valor));
             
         }
 

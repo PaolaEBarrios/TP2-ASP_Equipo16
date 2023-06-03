@@ -13,19 +13,14 @@ namespace CarritoDeCompras
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
 
+            Sesion sesion=new Sesion();
 
-            
-            if (!IsPostBack)
-            {
+                RepCarrito.DataSource = sesion.ListadeCarrito();
+                RepCarrito.DataBind(); 
 
-
-            }
-
-
-
-            
         }
+
+        
     }
 }

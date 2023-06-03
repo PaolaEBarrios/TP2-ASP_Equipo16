@@ -13,8 +13,8 @@ namespace dominio
         public string nombre { get; set; }
         public string marca { get; set; }
         public float precio { get; set; }
-        public string url { get; set; }
-        public float total { get; set; }
+        //public string url { get; set; }
+        
 
     }
 }

@@ -244,10 +244,14 @@ namespace Negocio
 
                     if (!(datos.Lector["Codigo"] is DBNull))
                         aux.codigoArticulo = (string)datos.Lector["Codigo"];
+                    else
+                        aux.codigoArticulo = (string)"sin codigo";
 
                     if (!(datos.Lector["Descripcion"] is DBNull))
                         aux.descripcion = (string)datos.Lector["Descripcion"];
-                    
+                    else
+                        aux.descripcion = "sin descripcion";
+
                     aux.Categoria = new Categoria();
                     if (!(datos.Lector["Categoria"] is DBNull))
                         aux.Categoria.categoria = (string)datos.Lector["Categoria"];
@@ -264,9 +268,12 @@ namespace Negocio
 
                     if (!(datos.Lector["Nombre"] is DBNull))
                         aux.nombre = (string)datos.Lector["Nombre"];
+                    else
+                        aux.nombre = "sin nombre";
 
-                    if (!(datos.Lector["Precio"]is DBNull))
+                    if (!(datos.Lector["Precio"] is DBNull))
                         aux.precio = (decimal)datos.Lector["Precio"];
+                    
 
                     lista.Add(aux);
 
