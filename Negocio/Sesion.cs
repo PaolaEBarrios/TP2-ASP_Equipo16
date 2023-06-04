@@ -146,20 +146,16 @@ namespace Negocio
 
 
                 //listaArticulo = negocio.listarArticuloXid(id.ToString());
-                
 
-                for(int i = 0; i<carro; i++)
+                foreach (var item in listaCarrito)
                 {
-                    if (listaCarrito[i].Id == id)
+                    if(item.Id == id)
                     {
-                        listaCarrito.Remove(listaCarrito[i]);
+                        listaCarrito.Remove(item);
+                        return;
                     }
-                    else
-                    {
-
-                    }
-                        
                 }
+               
                 
                 
 
