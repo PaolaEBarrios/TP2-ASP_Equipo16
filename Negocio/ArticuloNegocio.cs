@@ -124,9 +124,10 @@ namespace Negocio
 
         public void EliminarArticulo(int id)
         {
+            AccesoDatos datos = new AccesoDatos();
             try
             {
-                AccesoDatos datos = new AccesoDatos();
+                
                 datos.setearQuery("delete from ARTICULOS where Id = @id");
                 datos.setParameters("@id", id);
                 datos.ejecutarAccion();
@@ -134,6 +135,10 @@ namespace Negocio
             catch(Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
 
@@ -224,6 +229,10 @@ namespace Negocio
             {
 
                 throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
 

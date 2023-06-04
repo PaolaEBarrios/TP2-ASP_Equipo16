@@ -13,11 +13,11 @@
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
-        <asp:Repeater runat="server" ID="repRepetidor">
+        <asp:Repeater runat="server" ID="repRepetidor" OnItemDataBound="repRepetidor_ItemDataBound"  >
             <ItemTemplate>
                 <div class="col">
                     <div class="card">
-                        <img src="<%#Eval("imagen") %>" class="card-img-top" alt="...">
+                            <img src="<%#Eval("imagen") %>" class="card-img-top" alt="..." id="imagen">
                         <div class="card-body">
                             <p class="card-text" style="font-weight:bold;font-size:25px">$<%#Eval("Precio") %></p>
                             

@@ -14,24 +14,24 @@ namespace CarritoDeCompras
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ARREGLAR QUE AL AGREGAR LA PRIMERA VEZ NO AGREGA ARRIBA UNO.. PORQUE
-            //PRIMERO CARGA LISTAR DE DEFAUL
-            //LUEGO CARGA LA MASTER
-            //Y POR ULTIMO EL CLICK BOTON
+           
+
+
+        }
+
+        protected override void OnPreRender(EventArgs e)
+        {
+            base.OnPreRender(e);
 
             Sesion sesion = new Sesion();
-
             int valor = sesion.CantSession();
 
-
-
-            if ( valor == 0 )
+            if (valor == 0)
             {
                 lblContador.Text = "vacio";
             }
             else
             {
-                
                 lblContador.Text = valor.ToString();
             }
         }
