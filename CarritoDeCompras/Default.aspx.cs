@@ -20,12 +20,15 @@ namespace CarritoDeCompras
             
 
             AccesoDatos datos = new AccesoDatos();
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
             datos.setearQuery("create PROCEDURE SPlistarArticulo\r\nAS\r\nSELECT min(I.IMAGENURL)as UrlImagen, A.ID as Id,A.CODIGO as Codigo,A.NOMBRE as Nombre,A.Descripcion as Descripcion, C.Descripcion as Categoria, M.Descripcion as Marca,A.Precio as Precio\r\nfrom ARTICULOS as a\r\nleft join\r\nIMAGENES as i\r\non i.IdArticulo=a.id\r\nleft join MARCAS as m\r\non m.id=a.IdMarca\r\nleft join CATEGORIAS as c\r\non c.id=a.IdCategoria\r\ngroup by i.IdArticulo,a.Nombre,a.codigo,a.Descripcion,a.precio,a.id,c.Descripcion,m.Descripcion ");
             datos.ejecutarLectura();
             datos.cerrarConexion();
-            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            Session.Add("listaArticulooos", negocio.listarConSP());
             
-            ListaArticulo = negocio.listarConSP();
+            ListaArticulo = (List<Articulo>)Session["listaArticulooos"];
 
 
 
@@ -59,7 +62,12 @@ namespace CarritoDeCompras
 
         protected void filtro_TextChanged(object sender, EventArgs e)
         {
-            List<Articulo> lista= (List<Articulo>)Session["Lista Articulos"];
+
+            List<Articulo> list = (List<Articulo>)Session["listaArticulooos"];
+            List<Articulo> listaFiltrada = list.FindAll(x => x.nombre.ToUpper().Contains(Txtfiltro.Text.ToUpper()));
+
+            repRepetidor.DataSource=listaFiltrada;
+            repRepetidor.DataBind();
         }
     } 
 }

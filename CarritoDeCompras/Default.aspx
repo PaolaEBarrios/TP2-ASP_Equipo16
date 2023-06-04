@@ -5,8 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Tienda</h1>
 
-    <asp:Label Text="Filtrar" runat="server"/>
-    <asp:TextBox runat="server" ID="Txtfiltro" CssClass="form-control" AutoPostBack="true" OnTextChanged="filtro_TextChanged" />
+    <asp:Label Text="Buscar" runat="server" style="padding-right:10px; padding-bottom:10px"/>
+    <asp:TextBox runat="server" ID="Txtfiltro" CssClass="form-control" AutoPostBack="true" OnTextChanged="filtro_TextChanged" style="width:200px" Placeholder="Buscar por nombre..."/>
 
 
     <p>Tienda De Articulos</p>
@@ -19,11 +19,19 @@
                     <div class="card">
                         <img src="<%#Eval("imagen") %>" class="card-img-top" alt="...">
                         <div class="card-body">
+                            <p class="card-text" style="font-weight:bold;font-size:25px">$<%#Eval("Precio") %></p>
+                            
                             <h5 class="card-title"><%#Eval("Nombre") %></h5>
                             <p class="card-text"><%#Eval("Marca") %></p>
-                            <p class="card-text">$<%#Eval("Precio") %></p>
-                            <a href="DetalleArticulo.aspx?id=<%#Eval("Id") %>">Ver detalle</a>
-                            <asp:Button autoPOSTBACK="true" ID="btnAgregar" runat="server" Text="Agregar"  CssClass="btn btn-primary" CommandArgument='<%#Eval("Id") %>' CommandName="ArticuloId" OnClick="btnAgregar_Click"/>
+                            
+                            <div style="display:flex; float:left;padding-left:20px">
+                                <a href="DetalleArticulo.aspx?id=<%#Eval("Id") %>" style="padding-right:15px">Ver detalle</a>
+                            </div>
+                            
+                            <div style="display:flex; float:right;padding-right:20px">
+                                <asp:Button style="" autoPOSTBACK="true" ID="btnAgregar" runat="server" Text="Agregar"  CssClass="btn btn-primary" CommandArgument='<%#Eval("Id") %>' CommandName="ArticuloId" OnClick="btnAgregar_Click"/>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
