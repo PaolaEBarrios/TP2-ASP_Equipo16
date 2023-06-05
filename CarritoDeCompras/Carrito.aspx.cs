@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Negocio;
 using dominio;
+using System.Drawing.Imaging;
+
 namespace CarritoDeCompras
 {
     public partial class Carrito : System.Web.UI.Page
@@ -28,7 +30,8 @@ namespace CarritoDeCompras
             }
 
             lblTotal.Text = total.ToString();
-
+            
+            
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
@@ -45,7 +48,30 @@ namespace CarritoDeCompras
             sesion.ArticuloEliminarEnSession(int.Parse(valor));
 
 
+        }
 
+        protected void btnMas_Click(object sender, EventArgs e)
+        {
+            //Label lbl = (Label)RepCarrito.FindControl("lblCantidad");
+            //int total = int.Parse(lbl.Text);
+
+             //total += 1;
+
+            //lbl.Text = total.ToString();
+        }
+
+        protected void btnMenos_Click(object sender, EventArgs e)
+        {
+            //int total = int.Parse(lblCantidad.Text);
+
+            
+            //if (int.Parse(lblCantidad.Text) < 0)
+            //{
+               // total -= 1;
+
+               // lblCantidad.Text = total.ToString();
+           // }
+            
         }
     }
 }

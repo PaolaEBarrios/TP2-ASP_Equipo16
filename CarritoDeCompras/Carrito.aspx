@@ -13,14 +13,14 @@
                 
                 <div style="display:flex">
                     <div style="padding-left:20px;padding-right:10px; padding-bottom:5px">
-                        <asp:Button ID="btnMenos" runat="server" Text=" - " CssClass="btn btn-primary" style="" />
+                        <asp:Button ID="btnMenos" runat="server" Text=" - " OnClick="btnMenos_Click" CssClass="btn btn-primary" style="" />
                     </div>
                     
                     <div  style="padding-right:5px;padding-left:10px">
-                        <asp:TextBox ID="txtBoxCantidad" ReadOnly="true" Enabled="false" runat="server" style="width:35px;padding-top:5px;background-color:white"></asp:TextBox>
+                        <asp:Label ID="lblCantidad" ReadOnly="true" CommandName= tex Enabled="false" runat="server" style="width:35px;padding-top:5px;background-color:white">1</asp:Label>
                     </div>
                     <div style="padding-right:15px;padding-left:20px">
-                        <asp:Button ID="btnMas" runat="server" Text=" + " CssClass="btn btn-primary"/>
+                        <asp:Button ID="btnMas" runat="server" Text=" + " OnClick="btnMas_Click" CssClass="btn btn-primary"/>
                     </div>
                     
                 </div>
